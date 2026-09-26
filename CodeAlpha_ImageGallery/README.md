@@ -8,13 +8,13 @@ A responsive and interactive web-based image gallery application built with HTML
 
 Inspired by soft coastal water and atmospheric sky tones:
 
-| Element / Role | Hex Code | Visual Preview | Description |
-| :--- | :--- | :--- | :--- |
-| **Header Bar** | `#384956` | ![#384956](https://via.placeholder.com/12/384956/000000?text=+) | Deep Slate Blue |
-| **Active Filter Pill** | `#2B828B` | ![#2B828B](https://via.placeholder.com/12/2B828B/000000?text=+) | Cyan / Teal Accent |
-| **Page Background** | `#C2D1DD` | ![#C2D1DD](https://via.placeholder.com/12/C2D1DD/000000?text=+) | Soft Off-White / Ice Tint |
-| **Pill Outline / Text** | `#A4B8C6` | ![#A4B8C6](https://via.placeholder.com/12/A4B8C6/000000?text=+) | Muted Slate Blue |
-| **Lightbox Overlay** | `#141C24` | ![#141C24](https://via.placeholder.com/12/141C24/000000?text=+) | Semi-transparent Midnight Slate |
+| Element / Role | Hex Code | Description |
+| :--- | :--- | :--- |
+| **Header Bar** | `#384956` | Deep Slate Blue |
+| **Active Filter Pill** | `#2B828B` | Cyan / Teal Accent |
+| **Page Background** | `#C2D1DD` | Soft Off-White / Ice Tint |
+| **Pill Outline / Text** | `#A4B8C6` | Muted Slate Blue |
+| **Lightbox Overlay** | `#141C24` | Semi-transparent Midnight Slate |
 
 ---
 
