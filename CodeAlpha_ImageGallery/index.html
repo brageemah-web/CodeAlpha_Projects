@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Image Gallery</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class = "title">
+                Image Galley
+            </div>
+
+            <nav>
+                <button class = "filter-btn active" data-category = "all">All</button>
+                <button class = "filter-btn" data-category = "nature">Nature</button>
+                <button class = "filter-btn" data-category = "cities">Cities</button>
+                <button class = "filter-btn" data-category = "animals">Animals</button>
+            </nav>
+        </header>
+
+        <main>
+
+        <section class="head">
+            <h1>Explore <span>Beautiful</span> Moments</h1>
+
+            <p>
+                A collection of beautiful images from around the world
+            </p>
+        </section>
+
+
+   
+        <section class="gallery">
+
+            <div class="gallery-item"
+                 data-category="nature"
+                 data-index="0">
+
+                <img src= "images/water lily.jpg" alt = "Water lily">
+            </div>
+
+
+            <div class="gallery-item"
+                 data-category="cities"
+                 data-index="1">
+
+                <img src= "images/london.jpg" alt = "London">
+            </div>
+
+
+            <div class="gallery-item"
+                 data-category="animals"
+                 data-index="2">
+
+                <img src= "images/dog.jpg" alt = "Dog">
+            </div>
+
+
+            <div class="gallery-item"
+                 data-category="nature"
+                 data-index="3">
+
+                <img src= "images/beach.jpg" alt = "Beach">
+            </div>
+
+
+            <div class="gallery-item"
+                 data-category="animals"
+                 data-index="4">
+
+                <img src= "images/turtle.jpg" alt = "Turtle">
+            </div>
+
+
+            <div class="gallery-item"
+                 data-category="nature"
+                 data-index="5">
+
+                <img src= "images/hibiscus.jpg" alt = " Hibiscus">
+            </div>
+
+
+            <div class="gallery-item"
+                 data-category="animals"
+                 data-index="6">
+
+                <img src= "images/duck.jpg" alt = "Duck">
+            </div>
+
+
+            <div class="gallery-item"
+                 data-category="nature"
+                 data-index="7">
+
+                <img src= "images/cliff.jpg" alt = "Cliff">
+            </div>
+
+            <div class="gallery-item"
+                 data-category="nature"
+                 data-index="8">
+
+                <img src= "images/tulips.jpg" alt = "Field of tulips">
+            </div>
+
+            <div class="gallery-item"
+                 data-category="animals"
+                 data-index="9">
+
+                <img src= "images/bear.jpg" alt = "Bear">
+            </div>
+
+            <div class="gallery-item"
+                 data-category="nature"
+                 data-index="10">
+
+                <img src= "images/mountain.jpg" alt = "Mountain">
+            </div>
+
+            <div class="gallery-item"
+                 data-category="cities"
+                 data-index="11">
+
+                <img src= "images/chicago.jpg" alt = "Chicago">
+            </div>
+
+        </section>
+            
+        </main>
+
+        <div class = "lightbox" id = lightbox>
+                <button class = "close-btn" id = "closeBtn">&times;</button>
+                <button class = "prev-btn" id = "prevBtn">&#10094;</button>
+
+                <div class = "lightbox-content">
+                    <img id = "lightboxImage" src = "" alt = "">
+
+                    <div class = "image-info">
+                        <h2 id = "imageTitle"></h2>
+                        <p id = "imageCategory"></p>
+                    </div>
+                </div>
+
+                <button class = "next-btn" id = "nextBtn">&#10095;</button>
+
+        
+
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #C2D1DD;
+    color: #333333;
+    min-height: 100vh;
+}
+
+header {
+    height: 70px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #384956;
+    color: #ffffff;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    background: transparent;
+    color: #ffffff;
+    border: 1.5px solid #a4b8c6;
+    padding: 8px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 14px;
+}
+
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.filter-btn.active {
+    background: #2b828b;
+    border-color: #2b828b;
+    color: #ffffff;
+}
+
+.head {
+    text-align: center;
+    padding: 70px 20px;
+    position: relative;
+    background-image: url("images/banner2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.head h1, 
+.head p {
+    position: relative;
+    z-index: 2;
+}
+
+.head h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.head h1 span {
+    color: #384956;
+}
+
+.head p {
+    color: #f0f4f8;
+    font-size: 18px;
+    max-width: 600px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.gallery {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 60px;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #dce4eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 28, 36, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 800px;
+    width: 80%;
+    text-align: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.image-info {
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+.image-info h2 {
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.image-info p {
+    color: #a4b8c6;
+    font-size: 15px;
+}
+
+.close-btn,
+.prev-btn,
+.next-btn {
+    position: absolute;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover,
+.prev-btn:hover,
+.next-btn:hover {
+    background: #2b828b;
+    color: #ffffff;
+}
+
+.close-btn {
+    top: 25px;
+    right: 35px;
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.prev-btn,
+.next-btn {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.prev-btn {
+    left: 30px;
+}
+
+.next-btn {
+    right: 30px;
+}
+
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .head h1 {
+        font-size: 30px;
+    }
+
+    .gallery {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 250px;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+}
