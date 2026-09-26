@@ -1,6 +1,6 @@
 # CodeAlpha Internship Tasks
 
-This repository contains the web development projects completed as part of my CodeAlpha Internship.
+This repository contains the frontend development projects completed as part of my CodeAlpha Internship.
 
 ## Tasks
 
